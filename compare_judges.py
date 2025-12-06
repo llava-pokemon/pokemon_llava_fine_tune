@@ -285,8 +285,8 @@ def main(m_path, q_path):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--mistral", type=str, default="mistral_judge.jsonl")
-    ap.add_argument("--qwen", type=str, default="qwen_judge.jsonl")
+    ap.add_argument("--model1", type=str, required=True)
+    ap.add_argument("--model2", type=str, required=True)
     args = ap.parse_args()
 
-    main(args.mistral, args.qwen)
+    main(args.model1, args.model2)
